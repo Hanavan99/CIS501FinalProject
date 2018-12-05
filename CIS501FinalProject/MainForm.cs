@@ -16,5 +16,10 @@ namespace CIS501FinalProject
         {
             InitializeComponent();
         }
+
+        private void uxReload_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
