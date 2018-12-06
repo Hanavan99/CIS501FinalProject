@@ -8,6 +8,11 @@ namespace CIS501FinalProject.Semester
 {
     public class Location
     {
-        protected String facilityID;
+        protected string facilityID;
+
+        public Location(string facilityID)
+        {
+            this.facilityID = facilityID;
+        }
     }
 }

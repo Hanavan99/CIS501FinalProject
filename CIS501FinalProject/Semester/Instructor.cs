@@ -8,6 +8,11 @@ namespace CIS501FinalProject.Semester
 {
     public class Instructor
     {
-        protected String instructorName;
+        protected string instructorName;
+
+        public Instructor(string instructorName)
+        {
+            this.instructorName = instructorName;
+        }
     }
 }

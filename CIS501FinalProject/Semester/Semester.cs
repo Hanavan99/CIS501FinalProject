@@ -8,7 +8,17 @@ namespace CIS501FinalProject.Semester
 {
     public class Semester
     {
-        protected String semesterName;
+        protected string semesterName;
         protected List<Section> sections;
+
+        public Semester(string semesterName)
+        {
+            this.semesterName = semesterName;
+        }
+
+        public void AddSemester(Section section)
+        {
+            sections.Add(section);
+        }
     }
 }
