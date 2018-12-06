@@ -11,7 +11,7 @@ namespace CIS501FinalProject.Event
     {
         public void HandleEvent(object[] args)
         {
-            MessageBox.Show("Program Name: " + ProgramInfo.ProgramName + "\n" + );
+            MessageBox.Show("Program Name: " + ProgramInfo.ProgramName + "\nProgram Version: " + ProgramInfo.ProgramVersion);
         }
     }
 }

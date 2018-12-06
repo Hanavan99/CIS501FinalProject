@@ -30,13 +30,16 @@
         {
             this.uxMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxViewAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.uxLocalFilePath = new System.Windows.Forms.TextBox();
             this.uxKSISFilePath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uxReload = new System.Windows.Forms.Button();
             this.uxClear = new System.Windows.Forms.Button();
+            this.uxResults = new System.Windows.Forms.TextBox();
+            this.uxLoadLocalFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxLoadKSISFile = new System.Windows.Forms.ToolStripMenuItem();
             this.uxMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,7 @@
             this.uxMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.uxMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.uxViewAbout});
             this.uxMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.uxMenuStrip.Name = "uxMenuStrip";
             this.uxMenuStrip.Size = new System.Drawing.Size(705, 28);
@@ -54,15 +57,19 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxLoadLocalFile,
+            this.uxLoadKSISFile});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // aboutToolStripMenuItem
+            // uxViewAbout
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.uxViewAbout.Name = "uxViewAbout";
+            this.uxViewAbout.Size = new System.Drawing.Size(62, 24);
+            this.uxViewAbout.Text = "About";
+            this.uxViewAbout.Click += new System.EventHandler(this.uxViewAbout_Click);
             // 
             // uxLocalFilePath
             // 
@@ -115,11 +122,34 @@
             this.uxClear.Text = "Clear";
             this.uxClear.UseVisualStyleBackColor = true;
             // 
+            // uxResults
+            // 
+            this.uxResults.Location = new System.Drawing.Point(12, 59);
+            this.uxResults.Multiline = true;
+            this.uxResults.Name = "uxResults";
+            this.uxResults.ReadOnly = true;
+            this.uxResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.uxResults.Size = new System.Drawing.Size(683, 358);
+            this.uxResults.TabIndex = 7;
+            // 
+            // uxLoadLocalFile
+            // 
+            this.uxLoadLocalFile.Name = "uxLoadLocalFile";
+            this.uxLoadLocalFile.Size = new System.Drawing.Size(216, 26);
+            this.uxLoadLocalFile.Text = "Load Local File";
+            // 
+            // uxLoadKSISFile
+            // 
+            this.uxLoadKSISFile.Name = "uxLoadKSISFile";
+            this.uxLoadKSISFile.Size = new System.Drawing.Size(216, 26);
+            this.uxLoadKSISFile.Text = "Load KSIS File";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 429);
+            this.Controls.Add(this.uxResults);
             this.Controls.Add(this.uxClear);
             this.Controls.Add(this.uxReload);
             this.Controls.Add(this.label2);
@@ -141,13 +171,16 @@
 
         private System.Windows.Forms.MenuStrip uxMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uxViewAbout;
         private System.Windows.Forms.TextBox uxLocalFilePath;
         private System.Windows.Forms.TextBox uxKSISFilePath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button uxReload;
         private System.Windows.Forms.Button uxClear;
+        private System.Windows.Forms.TextBox uxResults;
+        private System.Windows.Forms.ToolStripMenuItem uxLoadLocalFile;
+        private System.Windows.Forms.ToolStripMenuItem uxLoadKSISFile;
     }
 }
 
