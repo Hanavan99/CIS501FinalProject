@@ -18,5 +18,18 @@ namespace CIS501FinalProject.Semester
             this.unitsMaximum = unitsMaximum;
             this.classAssignmentComponent = classAssignmentComponent;
         }
+
+        public override bool Equals(object obj)
+        {
+            Course course = (Course)obj;
+
+            if(this.unitsMinimum.Equals(course.unitsMinimum) && this.unitsMaximum.Equals(course.unitsMaximum)
+                && this.classAssignmentComponent.Equals(classAssignmentComponent))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

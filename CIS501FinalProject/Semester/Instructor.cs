@@ -14,5 +14,17 @@ namespace CIS501FinalProject.Semester
         {
             this.instructorName = instructorName;
         }
+
+        public override bool Equals(object obj)
+        {
+            Instructor instructor = (Instructor)obj;
+
+            if (this.instructorName.Equals(instructor.instructorName))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

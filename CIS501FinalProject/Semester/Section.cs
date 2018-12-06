@@ -40,5 +40,22 @@ namespace CIS501FinalProject.Semester
             course = new Course(unitsMinimum, unitsMaximum, classAssignmentComponent);
             instructor = new Instructor(instructorName);
         }
+
+        public override bool Equals(object obj)
+        {
+            Section section = (Section)obj;
+
+            if(this.subject.Equals(section.subject) && this.catalogNumber.Equals(section.catalogNumber)
+                && this.courseDescription.Equals(section.courseDescription) && this.sectionName
+                .Equals(section.sectionName) && this.consent.Equals(section.consent) && this.enrollmentCap
+                .Equals(section.enrollmentCap) && this.topicDescription.Equals(section.topicDescription)
+                && this.location.Equals(section.location) && this.meetingTime.Equals(section.meetingTime)
+                && this.course.Equals(section.course) && this.instructor.Equals(section.instructor))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

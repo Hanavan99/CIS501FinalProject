@@ -23,5 +23,35 @@ namespace CIS501FinalProject.Semester
             this.meetingTimeEnd = meetingTimeEnd;
             this.days = days;
         }
+
+        public override bool Equals(object obj)
+        {
+            MeetingTime meeting = (MeetingTime)obj;
+
+            if(this.meetingStartDate.Equals(meeting.meetingStartDate) && this.meetingEndDate
+                .Equals(meeting.meetingEndDate) && this.meetingTimeStart.Equals(meeting.meetingTimeStart)
+                && this.meetingTimeEnd.Equals(meeting.meetingTimeEnd) && this.DayCheck(meeting))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool DayCheck(MeetingTime meeting)
+        {
+            bool flag = true;
+
+            for(int i = 0; i < 7; i++)
+            {
+                if (!(this.days[i].Equals(meeting.days[i])))
+                {
+                    flag = false;
+                    break;
+                }
+            }
+
+            return flag;
+        }
     }
 }
