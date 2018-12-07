@@ -10,7 +10,7 @@ namespace CIS501FinalProject.Semester
     {
         protected string subject;
         protected string catalogNumber;
-        protected string courseDescription;
+        protected string classDescription;
         protected string sectionName;
         protected string consent;
         protected string enrollmentCap;
