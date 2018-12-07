@@ -81,7 +81,7 @@ namespace CIS501FinalProject.Event
             {
                 if (!local.Sections.Contains(ksisSection))
                 {
-                    if (!changedSections.Contains(ksisSection) && localOnlySections.Contains(ksisSection))
+                    if (!changedSections.Contains(ksisSection) && !localOnlySections.Contains(ksisSection))
                     {
                         results.Append("<< Section " + ksisSection.Subject + " " + ksisSection.CatalogNumber + " section " + ksisSection.SectionName + " not found in current semester.");
                         results.AppendLine();
