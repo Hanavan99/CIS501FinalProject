@@ -137,6 +137,7 @@
             this.uxClear.TabIndex = 6;
             this.uxClear.Text = "Clear";
             this.uxClear.UseVisualStyleBackColor = true;
+            this.uxClear.Click += new System.EventHandler(this.uxClear_Click);
             // 
             // uxResults
             // 

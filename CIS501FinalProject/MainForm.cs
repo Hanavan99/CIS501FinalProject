@@ -18,13 +18,15 @@ namespace CIS501FinalProject
             EventDispatcher.RegisterHandler("about", new ViewAboutEventHandler());
             EventDispatcher.RegisterHandler("load", new LoadEventHandler());
             EventDispatcher.RegisterHandler("verify", new VerifyEventHandler());
+            EventDispatcher.RegisterHandler("reload", new ReloadEventHandler());
+            EventDispatcher.RegisterHandler("clear", new ClearEventHandler());
 
             InitializeComponent();
         }
 
         private void uxReload_Click(object sender, EventArgs e)
         {
-            EventDispatcher.DispatchEvent("reload", new string[] { uxLocalFilePath.Text, uxKSISFilePath.Text });
+            EventDispatcher.DispatchEvent("reload", new object[] { uxLocalFilePath, uxKSISFilePath, uxResults });
         }
 
         private void uxViewAbout_Click(object sender, EventArgs e)
@@ -34,12 +36,17 @@ namespace CIS501FinalProject
 
         private void uxVerify_Click(object sender, EventArgs e)
         {
-            EventDispatcher.DispatchEvent("verify", new object[] { uxKSISFilePath, uxResults });
+            EventDispatcher.DispatchEvent("verify", new object[] { uxKSISFilePath, uxResults, true });
         }
 
         private void uxLoad_Click(object sender, EventArgs e)
         {
-            EventDispatcher.DispatchEvent("load", new object[] { uxLocalFilePath });
+            EventDispatcher.DispatchEvent("load", new object[] { uxLocalFilePath, true });
+        }
+
+        private void uxClear_Click(object sender, EventArgs e)
+        {
+            EventDispatcher.DispatchEvent("clear", new object[] { uxLocalFilePath, uxKSISFilePath, uxResults });
         }
     }
 }

@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\ClearEventHandler.cs" />
     <Compile Include="Event\EventDispatcher.cs" />
     <Compile Include="Event\IEventHandler.cs" />
     <Compile Include="Event\LoadEventHandler.cs" />
+    <Compile Include="Event\ReloadEventHandler.cs" />
     <Compile Include="Event\VerifyEventHandler.cs" />
     <Compile Include="Event\ViewAboutEventHandler.cs" />
     <Compile Include="File\FileLoader.cs" />
