@@ -8,7 +8,7 @@ namespace CIS501FinalProject.Semester
 {
     public class Instructor
     {
-        protected string instructorName;
+        private string instructorName;
 
         public Instructor(string instructorName)
         {

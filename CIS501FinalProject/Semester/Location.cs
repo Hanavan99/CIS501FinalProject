@@ -8,7 +8,7 @@ namespace CIS501FinalProject.Semester
 {
     public class Location
     {
-        protected string facilityID;
+        private string facilityID;
 
         public Location(string facilityID)
         {

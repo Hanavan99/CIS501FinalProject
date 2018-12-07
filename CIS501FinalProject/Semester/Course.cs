@@ -8,9 +8,9 @@ namespace CIS501FinalProject.Semester
 {
     public class Course
     {
-        protected string unitsMinimum;
-        protected string unitsMaximum;
-        protected string classAssignmentComponent;
+        private string unitsMinimum;
+        private string unitsMaximum;
+        private string classAssignmentComponent;
 
         public Course(string unitsMinimum, string unitsMaximum, string classAssignmentComponent)
         {

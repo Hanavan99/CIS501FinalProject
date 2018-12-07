@@ -8,11 +8,11 @@ namespace CIS501FinalProject.Semester
 {
     public class MeetingTime
     {
-        protected string meetingStartDate;
-        protected string meetingEndDate;
-        protected string meetingTimeStart;
-        protected string meetingTimeEnd;
-        protected bool[] days = new bool[7];
+        private string meetingStartDate;
+        private string meetingEndDate;
+        private string meetingTimeStart;
+        private string meetingTimeEnd;
+        private bool[] days = new bool[7];
 
         public MeetingTime(string meetingStartDate, string meetingEndDate, string meetingTimeStart, 
                             string meetingTimeEnd, bool [] days)
