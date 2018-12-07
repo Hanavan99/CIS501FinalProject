@@ -8,11 +8,11 @@ namespace CIS501FinalProject.Semester
 {
     public class MeetingTime
     {
-        protected string meetingStartDate;
-        protected string meetingEndDate;
-        protected string meetingTimeStart;
-        protected string meetingTimeEnd;
-        protected bool[] days = new bool[7];
+        private string meetingStartDate;
+        private string meetingEndDate;
+        private string meetingTimeStart;
+        private string meetingTimeEnd;
+        private bool[] days = new bool[7];
 
         public MeetingTime(string meetingStartDate, string meetingEndDate, string meetingTimeStart, 
                             string meetingTimeEnd, bool [] days)
@@ -23,6 +23,12 @@ namespace CIS501FinalProject.Semester
             this.meetingTimeEnd = meetingTimeEnd;
             this.days = days;
         }
+
+        public string MeetingStartDate { get => meetingStartDate; set => meetingStartDate = value; }
+        public string MeetingEndDate { get => meetingEndDate; set => meetingEndDate = value; }
+        public string MeetingTimeStart { get => meetingTimeStart; set => meetingTimeStart = value; }
+        public string MeetingTimeEnd { get => meetingTimeEnd; set => meetingTimeEnd = value; }
+        public bool[] Days { get => days; set => days = value; }
 
         public override bool Equals(object obj)
         {

@@ -64,9 +64,7 @@ namespace CIS501FinalProject.Semester
             if(this.subject.Equals(section.subject) && this.catalogNumber.Equals(section.catalogNumber)
                 && this.classDescription.Equals(section.classDescription) && this.sectionName
                 .Equals(section.sectionName) && this.consent.Equals(section.consent) && this.enrollmentCap
-                .Equals(section.enrollmentCap) && this.topicDescription.Equals(section.topicDescription)
-                && this.location.Equals(section.location) && this.meetingTime.Equals(section.meetingTime)
-                && this.course.Equals(section.course) && this.instructor.Equals(section.instructor))
+                .Equals(section.enrollmentCap) && this.topicDescription.Equals(section.topicDescription))
             {
                 return true;
             }

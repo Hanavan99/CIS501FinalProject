@@ -8,12 +8,14 @@ namespace CIS501FinalProject.Semester
 {
     public class Location
     {
-        protected string facilityID;
+        private string facilityID;
 
         public Location(string facilityID)
         {
             this.facilityID = facilityID;
         }
+
+        public string FacilityID { get => facilityID; set => facilityID = value; }
 
         public override bool Equals(object obj)
         {

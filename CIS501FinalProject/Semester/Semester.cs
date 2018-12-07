@@ -8,9 +8,9 @@ namespace CIS501FinalProject.Semester
 {
     public class Semester
     {
-        protected string semesterName;
-        protected List<Section> sections;
-        
+        private string semesterName;
+        private List<Section> sections;
+
         public Semester(string semesterName)
         {
             this.semesterName = semesterName;
@@ -44,6 +44,8 @@ namespace CIS501FinalProject.Semester
             {
                 return sections;
             }
-        } 
+        }
+
+        public string SemesterName { get => semesterName; set => semesterName = value; }
     }
 }

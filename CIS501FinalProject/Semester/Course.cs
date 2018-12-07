@@ -8,9 +8,9 @@ namespace CIS501FinalProject.Semester
 {
     public class Course
     {
-        protected string unitsMinimum;
-        protected string unitsMaximum;
-        protected string classAssignmentComponent;
+        private string unitsMinimum;
+        private string unitsMaximum;
+        private string classAssignmentComponent;
 
         public Course(string unitsMinimum, string unitsMaximum, string classAssignmentComponent)
         {
@@ -18,6 +18,10 @@ namespace CIS501FinalProject.Semester
             this.unitsMaximum = unitsMaximum;
             this.classAssignmentComponent = classAssignmentComponent;
         }
+
+        public string UnitsMinimum { get => unitsMinimum; set => unitsMinimum = value; }
+        public string UnitsMaximum { get => unitsMaximum; set => unitsMaximum = value; }
+        public string ClassAssignmentComponent { get => classAssignmentComponent; set => classAssignmentComponent = value; }
 
         public override bool Equals(object obj)
         {
