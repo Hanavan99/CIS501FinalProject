@@ -41,6 +41,18 @@ namespace CIS501FinalProject.Semester
             instructor = new Instructor(instructorName);
         }
 
+        public string Subject { get => subject; set => subject = value; }
+        public string CatalogNumber { get => catalogNumber; set => catalogNumber = value; }
+        public string ClassDescription { get => classDescription; set => classDescription = value; }
+        public string SectionName { get => sectionName; set => sectionName = value; }
+        public string Consent { get => consent; set => consent = value; }
+        public string EnrollmentCap { get => enrollmentCap; set => enrollmentCap = value; }
+        public string TopicDescription { get => topicDescription; set => topicDescription = value; }
+        public Location Location { get => location; set => location = value; }
+        public MeetingTime MeetingTime { get => meetingTime; set => meetingTime = value; }
+        public Course Course { get => course; set => course = value; }
+        public Instructor Instructor { get => instructor; set => instructor = value; }
+
         public override bool Equals(object obj)
         {
             if(obj == null)
@@ -62,6 +74,5 @@ namespace CIS501FinalProject.Semester
             return false;
         }
         
-
     }
 }
