@@ -16,7 +16,7 @@ namespace CIS501FinalProject.Semester
             this.semesterName = semesterName;
         }
 
-        public void AddSemester(Section section)
+        public void AddSection(Section section)
         {
             sections.Add(section);
         }
