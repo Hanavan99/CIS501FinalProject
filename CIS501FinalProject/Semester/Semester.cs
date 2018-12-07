@@ -10,7 +10,7 @@ namespace CIS501FinalProject.Semester
     {
         protected string semesterName;
         protected List<Section> sections;
-
+        
         public Semester(string semesterName)
         {
             this.semesterName = semesterName;
