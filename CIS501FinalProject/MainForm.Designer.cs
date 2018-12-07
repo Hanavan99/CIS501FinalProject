@@ -30,6 +30,8 @@
         {
             this.uxMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxVerify = new System.Windows.Forms.ToolStripMenuItem();
             this.uxViewAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.uxLocalFilePath = new System.Windows.Forms.TextBox();
             this.uxKSISFilePath = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.uxReload = new System.Windows.Forms.Button();
             this.uxClear = new System.Windows.Forms.Button();
             this.uxResults = new System.Windows.Forms.TextBox();
-            this.uxLoadLocalFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxLoadKSISFile = new System.Windows.Forms.ToolStripMenuItem();
             this.uxMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,11 +58,25 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxLoadLocalFile,
-            this.uxLoadKSISFile});
+            this.uxLoad,
+            this.uxVerify});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // uxLoad
+            // 
+            this.uxLoad.Name = "uxLoad";
+            this.uxLoad.Size = new System.Drawing.Size(216, 26);
+            this.uxLoad.Text = "Load";
+            this.uxLoad.Click += new System.EventHandler(this.uxLoad_Click);
+            // 
+            // uxVerify
+            // 
+            this.uxVerify.Name = "uxVerify";
+            this.uxVerify.Size = new System.Drawing.Size(216, 26);
+            this.uxVerify.Text = "Verify";
+            this.uxVerify.Click += new System.EventHandler(this.uxVerify_Click);
             // 
             // uxViewAbout
             // 
@@ -75,6 +89,7 @@
             // 
             this.uxLocalFilePath.Location = new System.Drawing.Point(63, 31);
             this.uxLocalFilePath.Name = "uxLocalFilePath";
+            this.uxLocalFilePath.ReadOnly = true;
             this.uxLocalFilePath.Size = new System.Drawing.Size(215, 22);
             this.uxLocalFilePath.TabIndex = 1;
             // 
@@ -82,6 +97,7 @@
             // 
             this.uxKSISFilePath.Location = new System.Drawing.Point(332, 31);
             this.uxKSISFilePath.Name = "uxKSISFilePath";
+            this.uxKSISFilePath.ReadOnly = true;
             this.uxKSISFilePath.Size = new System.Drawing.Size(201, 22);
             this.uxKSISFilePath.TabIndex = 2;
             // 
@@ -132,18 +148,6 @@
             this.uxResults.Size = new System.Drawing.Size(683, 358);
             this.uxResults.TabIndex = 7;
             // 
-            // uxLoadLocalFile
-            // 
-            this.uxLoadLocalFile.Name = "uxLoadLocalFile";
-            this.uxLoadLocalFile.Size = new System.Drawing.Size(216, 26);
-            this.uxLoadLocalFile.Text = "Load Local File";
-            // 
-            // uxLoadKSISFile
-            // 
-            this.uxLoadKSISFile.Name = "uxLoadKSISFile";
-            this.uxLoadKSISFile.Size = new System.Drawing.Size(216, 26);
-            this.uxLoadKSISFile.Text = "Load KSIS File";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,8 +183,8 @@
         private System.Windows.Forms.Button uxReload;
         private System.Windows.Forms.Button uxClear;
         private System.Windows.Forms.TextBox uxResults;
-        private System.Windows.Forms.ToolStripMenuItem uxLoadLocalFile;
-        private System.Windows.Forms.ToolStripMenuItem uxLoadKSISFile;
+        private System.Windows.Forms.ToolStripMenuItem uxLoad;
+        private System.Windows.Forms.ToolStripMenuItem uxVerify;
     }
 }
 

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Event\EventDispatcher.cs" />
     <Compile Include="Event\IEventHandler.cs" />
+    <Compile Include="Event\LoadEventHandler.cs" />
     <Compile Include="Event\VerifyEventHandler.cs" />
     <Compile Include="Event\ViewAboutEventHandler.cs" />
     <Compile Include="File\FileLoader.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgramInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleMemory.cs" />
     <Compile Include="Semester\Course.cs" />
     <Compile Include="Semester\Instructor.cs" />
     <Compile Include="Semester\Location.cs" />

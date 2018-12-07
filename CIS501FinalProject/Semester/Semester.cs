@@ -14,6 +14,7 @@ namespace CIS501FinalProject.Semester
         public Semester(string semesterName)
         {
             this.semesterName = semesterName;
+            this.sections = new List<Section>();
         }
 
         public void AddSection(Section section)

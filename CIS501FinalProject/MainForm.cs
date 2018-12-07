@@ -16,6 +16,8 @@ namespace CIS501FinalProject
         public MainForm()
         {
             EventDispatcher.RegisterHandler("about", new ViewAboutEventHandler());
+            EventDispatcher.RegisterHandler("load", new LoadEventHandler());
+            EventDispatcher.RegisterHandler("verify", new VerifyEventHandler());
 
             InitializeComponent();
         }
@@ -28,6 +30,16 @@ namespace CIS501FinalProject
         private void uxViewAbout_Click(object sender, EventArgs e)
         {
             EventDispatcher.DispatchEvent("about", null);
+        }
+
+        private void uxVerify_Click(object sender, EventArgs e)
+        {
+            EventDispatcher.DispatchEvent("verify", new object[] { uxKSISFilePath, uxResults });
+        }
+
+        private void uxLoad_Click(object sender, EventArgs e)
+        {
+            EventDispatcher.DispatchEvent("load", new object[] { uxLocalFilePath });
         }
     }
 }

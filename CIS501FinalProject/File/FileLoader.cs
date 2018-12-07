@@ -28,15 +28,15 @@ namespace CIS501FinalProject.File
                     string line = reader.ReadLine();
                     string[] columns = line.Split(',');
                     bool[] days = new bool[7];
-                    days[0] = bool.Parse(columns[13]);
-                    days[1] = bool.Parse(columns[14]);
-                    days[2] = bool.Parse(columns[15]);
-                    days[3] = bool.Parse(columns[16]);
-                    days[4] = bool.Parse(columns[17]);
-                    days[5] = bool.Parse(columns[18]);
-                    days[6] = bool.Parse(columns[19]);
+                    days[0] = columns[13].Equals("Y");
+                    days[1] = columns[14].Equals("Y");
+                    days[2] = columns[15].Equals("Y");
+                    days[3] = columns[16].Equals("Y");
+                    days[4] = columns[17].Equals("Y");
+                    days[5] = columns[18].Equals("Y");
+                    days[6] = columns[19].Equals("Y");
                     Section section = new Section(columns[0], columns[1], columns[2], columns[3], columns[5], columns[6], columns[7], columns[10], columns[8], columns[9], columns[11], columns[12], days, columns[20], columns[21], columns[22], columns[4]);
-                    semester.AddSemester(section);
+                    semester.AddSection(section);
                 }
 
                 return semester;
