@@ -15,6 +15,8 @@ namespace CIS501FinalProject.Semester
             this.instructorName = instructorName;
         }
 
+        public string InstructorName { get => instructorName; set => instructorName = value; }
+
         public override bool Equals(object obj)
         {
             if(obj == null)

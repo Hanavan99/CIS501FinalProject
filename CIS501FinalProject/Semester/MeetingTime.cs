@@ -24,6 +24,12 @@ namespace CIS501FinalProject.Semester
             this.days = days;
         }
 
+        public string MeetingStartDate { get => meetingStartDate; set => meetingStartDate = value; }
+        public string MeetingEndDate { get => meetingEndDate; set => meetingEndDate = value; }
+        public string MeetingTimeStart { get => meetingTimeStart; set => meetingTimeStart = value; }
+        public string MeetingTimeEnd { get => meetingTimeEnd; set => meetingTimeEnd = value; }
+        public bool[] Days { get => days; set => days = value; }
+
         public override bool Equals(object obj)
         {
             if(obj == null)

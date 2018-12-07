@@ -15,6 +15,8 @@ namespace CIS501FinalProject.Semester
             this.facilityID = facilityID;
         }
 
+        public string FacilityID { get => facilityID; set => facilityID = value; }
+
         public override bool Equals(object obj)
         {
             if(obj == null)

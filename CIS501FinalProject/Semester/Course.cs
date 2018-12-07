@@ -19,6 +19,10 @@ namespace CIS501FinalProject.Semester
             this.classAssignmentComponent = classAssignmentComponent;
         }
 
+        public string UnitsMinimum { get => unitsMinimum; set => unitsMinimum = value; }
+        public string UnitsMaximum { get => unitsMaximum; set => unitsMaximum = value; }
+        public string ClassAssignmentComponent { get => classAssignmentComponent; set => classAssignmentComponent = value; }
+
         public override bool Equals(object obj)
         {
             if(obj == null)

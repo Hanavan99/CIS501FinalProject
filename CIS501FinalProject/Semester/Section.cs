@@ -29,7 +29,7 @@ namespace CIS501FinalProject.Semester
         {
             this.subject = subject;
             this.catalogNumber = catalogNumber;
-            this.courseDescription = courseDescription;
+            this.classDescription = courseDescription;
             this.sectionName = sectionName;
             this.consent = consent;
             this.enrollmentCap = enrollmentCap;
@@ -62,11 +62,9 @@ namespace CIS501FinalProject.Semester
             Section section = (Section)obj;
 
             if(this.subject.Equals(section.subject) && this.catalogNumber.Equals(section.catalogNumber)
-                && this.courseDescription.Equals(section.courseDescription) && this.sectionName
+                && this.classDescription.Equals(section.classDescription) && this.sectionName
                 .Equals(section.sectionName) && this.consent.Equals(section.consent) && this.enrollmentCap
-                .Equals(section.enrollmentCap) && this.topicDescription.Equals(section.topicDescription)
-                && this.location.Equals(section.location) && this.meetingTime.Equals(section.meetingTime)
-                && this.course.Equals(section.course) && this.instructor.Equals(section.instructor))
+                .Equals(section.enrollmentCap) && this.topicDescription.Equals(section.topicDescription))
             {
                 return true;
             }

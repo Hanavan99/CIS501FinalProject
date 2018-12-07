@@ -43,6 +43,8 @@ namespace CIS501FinalProject.Semester
             {
                 return sections;
             }
-        } 
+        }
+
+        public string SemesterName { get => semesterName; set => semesterName = value; }
     }
 }
