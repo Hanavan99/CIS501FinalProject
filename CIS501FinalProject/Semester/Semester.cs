@@ -37,7 +37,7 @@ namespace CIS501FinalProject.Semester
             return false;
         }
 
-        public Section Sections
+        public List<Section> Sections
         {
             get
             {

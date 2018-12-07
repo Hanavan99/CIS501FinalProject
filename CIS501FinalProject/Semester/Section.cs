@@ -8,17 +8,17 @@ namespace CIS501FinalProject.Semester
 {
     public class Section
     {
-        protected string subject;
-        protected string catalogNumber;
-        protected string classDescription;
-        protected string sectionName;
-        protected string consent;
-        protected string enrollmentCap;
-        protected string topicDescription;
-        protected Location location;
-        protected MeetingTime meetingTime;
-        protected Course course;
-        protected Instructor instructor;
+        private string subject;
+        private string catalogNumber;
+        private string classDescription;
+        private string sectionName;
+        private string consent;
+        private string enrollmentCap;
+        private string topicDescription;
+        private Location location;
+        private MeetingTime meetingTime;
+        private Course course;
+        private Instructor instructor;
 
         public Section(string subject, string catalogNumber, string courseDescription,
                         string sectionName, string consent, string enrollmentCap,
@@ -61,5 +61,7 @@ namespace CIS501FinalProject.Semester
 
             return false;
         }
+        
+
     }
 }
