@@ -36,5 +36,13 @@ namespace CIS501FinalProject.Semester
 
             return false;
         }
+
+        public Section Sections
+        {
+            get
+            {
+                return sections;
+            }
+        } 
     }
 }
