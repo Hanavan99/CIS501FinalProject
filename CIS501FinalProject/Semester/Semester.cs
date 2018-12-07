@@ -23,24 +23,18 @@ namespace CIS501FinalProject.Semester
 
         public override bool Equals(object obj)
         {
-            Semester semester = (Semester)obj;
-
-            if(this.sections.Count != semester.sections.Count)
+            if(obj == null)
             {
                 return false;
             }
+            Semester semester = (Semester)obj;
 
-            bool flag = true;
-
-            for(int i = 0; i < this.sections.Count; i++)
+            if (this.semesterName.Equals(semester.semesterName))
             {
-                if (!(this.sections[i].Equals(semester.Equals(semester.sections[i]))))
-                {
-                    flag = false;
-                }
+                return true;
             }
 
-            return flag;
+            return false;
         }
     }
 }

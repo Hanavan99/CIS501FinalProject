@@ -17,6 +17,10 @@ namespace CIS501FinalProject.Semester
 
         public override bool Equals(object obj)
         {
+            if(obj == null)
+            {
+                return false;
+            }
             Location location = (Location)obj;
 
             if (this.facilityID.Equals(location.facilityID))

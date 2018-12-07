@@ -43,6 +43,10 @@ namespace CIS501FinalProject.Semester
 
         public override bool Equals(object obj)
         {
+            if(obj == null)
+            {
+                return false;
+            }
             Section section = (Section)obj;
 
             if(this.subject.Equals(section.subject) && this.catalogNumber.Equals(section.catalogNumber)

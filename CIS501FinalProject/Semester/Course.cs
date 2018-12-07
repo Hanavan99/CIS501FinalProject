@@ -21,6 +21,10 @@ namespace CIS501FinalProject.Semester
 
         public override bool Equals(object obj)
         {
+            if(obj == null)
+            {
+                return false;
+            }
             Course course = (Course)obj;
 
             if(this.unitsMinimum.Equals(course.unitsMinimum) && this.unitsMaximum.Equals(course.unitsMaximum)
